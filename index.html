@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokédex – TEAM CodeMasters</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap">
+
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+      background: linear-gradient(#111827, #050816);
+      color: white;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .pokedex-wrapper {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-weight: 800;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #ff4b8b, #ffd166);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .search-area {
+      max-width: 420px;
+      margin: 30px auto 10px;
+    }
+
+    /* CONTENEDOR DEL POKÉMON */
+    #pokemon-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pokedex-card {
+      background: none;
+      border: none;
+      box-shadow: none;
+      width: 100%;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .pokedex-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .pokedex-image img {
+      width: 100px;
+      margin: 10px auto;
+    }
+
+    .pokedex-types {
+      margin: 15px 0;
+    }
+
+    .type-pill {
+      padding: 6px 18px;
+      border-radius: 25px;
+      background: #84cc16;
+      color: #111;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .pokedex-meta {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* STATS EN CUADROS ABAJO */
+    .pokedex-stats {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-item {
+      background: #111827;
+      border-radius: 12px;
+      padding: 12px 0;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    .stat-value {
+      font-size: 18px;
+      font-weight: bold;
+      color: #86efac;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="pokedex-wrapper">
+
+    <!-- ✅ TÍTULO DEL TEAM -->
+    <h1>Pokédex – GATO</h1>
+    <p class="text-center">Nuestro primer Pokémon del equipo</p>
+
+    <!-- ✅ BUSCADOR -->
+    <section class="search-area">
+      <div class="input-group">
+        <input id="search-input" class="form-control" type="text" placeholder="pikachu, charizard...">
+        <button id="search-button" class="btn btn-danger">BUSCAR</button>
+      </div>
+    </section>
+
+    <!-- ✅ CONTENEDOR DONDE TU JS INSERTA LA TARJETA -->
+    <ul id="pokemon-list"></ul>
+
+  </div>
+
+  <!-- ✅ TU ARCHIVO JS ORIGINAL -->
+  <script src="app.js"></script>
+
+</body>
+</html>
